@@ -25,94 +25,142 @@ return new class extends Migration
         $dataGejala = [
             [
                 'kode_gejala' => 'G01',
-                'nama_gejala' => 'Memiliki hasrat seksual yang tinggi',
+                'nama_gejala' => 'Demam dan menggigil',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G02',
-                'nama_gejala' => 'Seksual disertai kekerasan fisik',
+                'nama_gejala' => 'Batuk kering (dahak dan berdarah)',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G03',
-                'nama_gejala' => 'Kepuasan seksual dengan disakiti pasangannya',
+                'nama_gejala' => 'Sesak nafas',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G04',
-                'nama_gejala' => 'Memiliki koleksi benda mati yang membuatnya tertarik dalam berfantasi seksual',
+                'nama_gejala' => 'Berkeringat',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G05',
-                'nama_gejala' => 'Fantasi seksual terhadap benda mati',
+                'nama_gejala' => 'Nyeri dada saat bernafas dan batuk',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G06',
-                'nama_gejala' => 'Ketertarikan yang berlebihan pada benda mati',
+                'nama_gejala' => 'Mual dan muntah',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G07',
-                'nama_gejala' => 'Memiliki ketertarikan berlebih terhadap sesama jenis',
+                'nama_gejala' => 'Kelenjar getah bening bengkak',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G08',
-                'nama_gejala' => 'Kontak seksual dengan sesama jenis',
+                'nama_gejala' => 'Badan terasa panas dingin',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G09',
-                'nama_gejala' => 'Suka memuji sesama jenis',
+                'nama_gejala' => 'Diare',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G10',
-                'nama_gejala' => 'Menjaga jarak dari lawan jenis',
+                'nama_gejala' => 'Tidak nafsu makan',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G11',
-                'nama_gejala' => 'Memiliki fantasi seksual terhadap anak dibawah umur',
+                'nama_gejala' => 'Lemas',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G12',
-                'nama_gejala' => 'Melakukan kontak seksual terhadap anak dibawah umur',
+                'nama_gejala' => 'Sakit kepala',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G13',
-                'nama_gejala' => 'Berkeinginan untuk mengganti jenis kelamin',
+                'nama_gejala' => 'Detak jantung meningkat',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G14',
-                'nama_gejala' => 'Memiliki dorongan untuk bertingkah laku seperti lawan jenis',
+                'nama_gejala' => 'Bau mulut',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_gejala' => 'G15',
-                'nama_gejala' => 'Memiliki koleksi barang - barang dari lawan jenis',
+                'nama_gejala' => 'Batuk yang berlangsung lama biasanya berdahak',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+            [
+                'kode_gejala' => 'G16',
+                'nama_gejala' => 'Sesak dada',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'kode_gejala' => 'G17',
+                'nama_gejala' => 'Batuk mengeluarkan darah',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'kode_gejala' => 'G18',
+                'nama_gejala' => 'Berkeringat saat malam hari',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'kode_gejala' => 'G19',
+                'nama_gejala' => 'Turun berat badan',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'kode_gejala' => 'G20',
+                'nama_gejala' => 'Sulit bernafas',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'kode_gejala' => 'G21',
+                'nama_gejala' => 'Batuk',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'kode_gejala' => 'G22',
+                'nama_gejala' => 'Mengi',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'kode_gejala' => 'G23',
+                'nama_gejala' => 'Pembengkakan ditungkai kaki',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ]
         ];
 
         DB::table('tabel_data_gejala')->insert($dataGejala);

@@ -73,9 +73,10 @@ class DiagnosaController extends Controller
                 $jumlahNilaiBobot[$key] += $nilai_bobot[$k];
                 $nilaiKedekatan[$key] += $v * $nilai_bobot[$k];
             }
-
-            $totalNilaiKedekatan[$key] = $nilaiKedekatan[$key] / $jumlahNilaiBobot[$key];
+            $totalNilaiKedekatan[$key] = round($nilaiKedekatan[$key] / $jumlahNilaiBobot[$key], 2);
         }
+
+        dd($totalNilaiKedekatan);
 
         $nilaiMax = max($totalNilaiKedekatan);
         $kodeKasusSearch = array_search($nilaiMax, $totalNilaiKedekatan);

@@ -25,63 +25,56 @@ return new class extends Migration
 
         $dataRiwayatKasus = [
             [
-                'kode_kasus' => 'D11',
+                'kode_kasus' => 'D01',
                 'array_gejala' => json_encode([
+                    'G01',
                     'G02',
-                    'G03'
+                    'G07',
+                    'G08'
                 ]),
-                'hasil_diagnosa' => 'Masokisme',
+                'hasil_diagnosa' => 'Pneumonia',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
-                'kode_kasus' => 'D29',
+                'kode_kasus' => 'D02',
                 'array_gejala' => json_encode([
-                    'G04',
-                    'G06'
+                    'G01',
+                    'G03',
+                    'G06',
+                    'G10',
+                    'G11',
+                    'G15',
+                    'G16',
+                    'G17',
+                    'G18',
+                    'G19'
                 ]),
-                'hasil_diagnosa' => 'Fetishisme',
+                'hasil_diagnosa' => 'Tuberkolosis (TB)',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_kasus' => 'D03',
                 'array_gejala' => json_encode([
-                    'G07',
-                    'G09',
-                    'G10'
+                    'G16',
+                    'G20',
+                    'G21',
+                    'G22'
                 ]),
-                'hasil_diagnosa' => 'Homoseksual',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-            [
-                'kode_kasus' => 'D01',
-                'array_gejala' => json_encode([
-                    'G01',
-                    'G04'
-                ]),
-                'hasil_diagnosa' => 'Fetishisme',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-            [
-                'kode_kasus' => 'D09',
-                'array_gejala' => json_encode([
-                    'G12',
-                    'G01'
-                ]),
-                'hasil_diagnosa' => 'Pedofilia',
+                'hasil_diagnosa' => 'Asma',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
                 'kode_kasus' => 'D04',
                 'array_gejala' => json_encode([
-                    'G13',
-                    'G14'
+                    'G03',
+                    'G15',
+                    'G16',
+                    'G22'
                 ]),
-                'hasil_diagnosa' => 'Transvetitisme',
+                'hasil_diagnosa' => 'Penyakit Paru Obstruktif Kronis (PPOK)',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ]
