@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Guest;
 use App\Http\Controllers\Controller;
 use App\Models\DataBasisPengetahuan;
 use App\Models\DataGejala;
+use App\Models\DataPenyakit;
 use App\Models\DataRiwayatKasus;
 use App\Models\DataRiwayatPasien;
 use Carbon\Carbon;
@@ -65,18 +66,21 @@ class DiagnosaController extends Controller
         */
         $jumlahNilaiBobot = [];
         foreach ($NilaiKondisi as $key => $value) {
+            $hasilDiagnosaLama[$key] = DataRiwayatKasus::where('kode_kasus', $key)->first()->hasil_diagnosa;
+            $idPenyakitLama[$key] = DataPenyakit::where('nama_penyakit', $hasilDiagnosaLama[$key])->first()->id_penyakit;
             $jumlahNilaiBobot[$key] = 0;
             $nilaiKedekatan[$key] = 0;
             foreach ($value as $k => $v) {
                 $id_gejala[$k] = DataGejala::where('kode_gejala', $k)->first()->id_gejala;
-                $nilai_bobot[$k] = DataBasisPengetahuan::where('id_gejala', $id_gejala[$k])->first()->nilai_bobot;
+                $nilai_bobot[$k] = DataBasisPengetahuan::where([
+                    'id_penyakit' => $idPenyakitLama[$key],
+                    'id_gejala' => $id_gejala[$k]
+                ])->first()->nilai_bobot;
                 $jumlahNilaiBobot[$key] += $nilai_bobot[$k];
                 $nilaiKedekatan[$key] += $v * $nilai_bobot[$k];
             }
             $totalNilaiKedekatan[$key] = round($nilaiKedekatan[$key] / $jumlahNilaiBobot[$key], 2);
         }
-
-        dd($totalNilaiKedekatan);
 
         $nilaiMax = max($totalNilaiKedekatan);
         $kodeKasusSearch = array_search($nilaiMax, $totalNilaiKedekatan);

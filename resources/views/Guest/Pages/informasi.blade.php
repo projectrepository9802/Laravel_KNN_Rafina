@@ -2,7 +2,7 @@
 
 @section('content-wrapper')
     <div class="container-fluid" style="height: 100%;">
-        <h3 class="text-center pb-5 text-white fw-bold">Informasi Penyakit</h3>
+        <h3 class="text-center pt-5 text-white fw-bold mb-5">Informasi Penyakit</h3>
         <div class="accordion">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingFour">

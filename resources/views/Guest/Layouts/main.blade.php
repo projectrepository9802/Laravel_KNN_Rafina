@@ -19,7 +19,7 @@
         <div class="card-header p-0">
             @include('Guest.Partials.navbar')
         </div>
-        <div class="card-body p-0 bg-primary bg-gradient" style="height: 100%;">
+        <div class="card-body p-0" style="height: 100%; background-color:#BF00FF;">
             <div class="container" style="height: 100%;">
                 @yield('content-wrapper')
             </div>

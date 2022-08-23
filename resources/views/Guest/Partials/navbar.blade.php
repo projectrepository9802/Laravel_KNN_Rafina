@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white bg-gradient">
     <div class="container">
-        <a class="navbar-brand fw-bold text-primary" href="{{ URL::to('/') }}">
+        <a class="navbar-brand fw-bold" href="{{ URL::to('/') }}" style="color: #BF00FF;">
             <img src="{{ URL::to('bin/images/server-solid.svg') }}" alt="" width="30" height="24"
                 class="d-inline-block align-text-top branding">
             SP K-Nearest Neighbor
@@ -26,7 +26,8 @@
                 </li>
             </ul>
             <div class="d-flex">
-                <a href="{{ URL::to('login') }}" class="btn btn-primary fw-bold">
+                <a href="{{ URL::to('login') }}" class="btn btn-primary fw-bold"
+                    style="background-color: #BF00FF; border-color:#BF00FF;">
                     <i class="fas fa-sign-in-alt me-1"></i>
                     LOGIN
                 </a>

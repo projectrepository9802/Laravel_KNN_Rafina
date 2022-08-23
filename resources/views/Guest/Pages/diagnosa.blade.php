@@ -29,7 +29,7 @@
             </div>
         @endif
         <div class="card" style="height: 70%;">
-            <div class="card-header text-white fw-bold bg-success bg-gradient">
+            <div class="card-header text-white fw-bold" style="background-color: #BF00FF;">
                 Konsultasi Gejala
             </div>
             <div class="card-body" style="height: 100%;">
@@ -88,7 +88,7 @@
                             <col span="1" style="width: 80%;">
                             <col span="1" style="width: 5%;">
                         </colgroup>
-                        <thead class="text-white bg-primary bg-gradient">
+                        <thead class="text-white" style="background-color: #BF00FF;">
                             <tr class="text-center">
                                 <th>No.</th>
                                 <th>Kode Gejala</th>
@@ -118,7 +118,8 @@
                         </tbody>
                     </table>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-primary fw-bold" type="submit">
+                        <button class="btn btn-primary fw-bold" type="submit"
+                            style="background-color: #BF00FF; border-color: #BF00FF;">
                             <i class="fa-solid fa-floppy-disk me-1"></i>
                             Proses Data
                         </button>

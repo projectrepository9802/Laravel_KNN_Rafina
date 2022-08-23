@@ -14,7 +14,7 @@
                     based learning” dan merupakan algoritma non parametrik. Algoritma KNN digunakan untuk klasifikasi dan
                     regresi.
                 </p>
-                <a href="{{ URL::to('diagnosa') }}" class="btn" style="background-color: white; color:#0d6efd;">
+                <a href="{{ URL::to('diagnosa') }}" class="btn" style="background-color: white; color:#BF00FF;;">
                     <i class="fas fa-play-circle me-1"></i>
                     Mulai Konsultasi
                 </a>
