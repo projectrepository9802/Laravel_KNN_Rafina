@@ -3,7 +3,7 @@
 @section('content-wrapper')
     <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
         <div class="card" style="width: 25em;">
-            <div class="card-header text-center h3 fw-bold text-white bg-success bg-gradient">
+            <div class="card-header text-center h3 fw-bold text-white" style="background-color: #BF00FF;">
                 LOGIN
             </div>
             <div class="card-body">
@@ -23,7 +23,8 @@
                 </svg>
                 @if (session()->has('errorMessage'))
                     <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                            aria-label="Danger:">
                             <use xlink:href="#exclamation-triangle-fill" />
                         </svg>
                         <div>
@@ -33,7 +34,8 @@
                     </div>
                 @elseif (session()->has('successMessage'))
                     <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                            aria-label="Success:">
                             <use xlink:href="#check-circle-fill" />
                         </svg>
                         <div>
@@ -73,7 +75,8 @@
                         <a href="{{ URL::to('lupa-password') }}">Lupa Password</a>
                     </div>
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary bg-gradient" type="submit">
+                        <button class="btn btn-primary bg-gradient" type="submit"
+                            style="background-color: #BF00FF; border-color:#BF00FF;">
                             <i class="fas fa-sign-in-alt me-1"></i>
                             Submit Login
                         </button>

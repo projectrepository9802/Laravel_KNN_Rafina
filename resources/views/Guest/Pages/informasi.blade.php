@@ -99,9 +99,10 @@
                 </h2>
                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body text-center">
-                        <img class="img-fluid" src="{{ URL::to('bin/images/WhatsApp Image 2022-08-23 at 20.58.59.jpeg') }}"
-                            alt="">
+                    <div class="accordion-body text-center" style="height: 500px !important;">
+                        <iframe
+                            src="https://docs.google.com/document/d/e/2PACX-1vQFdUoupVcM2BQ1fXcEXRSO8IIjqtVFvkfXISxeckI8ZBBcsqwIj4-5gJETpzK3DW3sQcbRlAPv4xoS/pub?embedded=true"
+                            style="width: 100%; height: 100%;"></iframe>
                     </div>
                 </div>
             </div>

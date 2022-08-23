@@ -15,7 +15,8 @@
 </head>
 
 <body>
-    <div class="card">
+    <div class="card"
+        {{ Request::segment(1) == 'login' || Request::segment(1) == 'lupa-password' ? 'style=height:100vh' : null }}>
         <div class="card-header p-0">
             @include('Guest.Partials.navbar')
         </div>
