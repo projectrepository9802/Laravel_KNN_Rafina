@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="card" style="height: 100vh;">
+    <div class="card">
         <div class="card-header p-0">
             @include('Guest.Partials.navbar')
         </div>
