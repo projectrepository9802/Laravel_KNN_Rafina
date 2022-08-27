@@ -33,7 +33,17 @@
                 <div class="row mb-4">
                     <div class="col-sm-4">
                         <p class="p-0 m-0"><strong>Nama Penyakit</strong> :
-                            {{ $dataPasien->hasil_diagnosa }}
+                            {{ json_decode($dataPasien->hasil_diagnosa)->hasil_diagnosa }}
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="p-0 m-0"><strong>Bobot Penyakit</strong> :
+                            {{ json_decode($dataPasien->hasil_diagnosa)->bobot_diagnosa }}
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="p-0 m-0"><strong>Persentase Penyakit</strong> :
+                            {{ json_decode($dataPasien->hasil_diagnosa)->persentase_diagnosa }} %
                         </p>
                     </div>
                 </div>

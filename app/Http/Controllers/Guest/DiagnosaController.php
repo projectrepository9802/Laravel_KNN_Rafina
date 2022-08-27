@@ -96,13 +96,19 @@ class DiagnosaController extends Controller
         }
 
         $hasilDiagnosa['gejala_pasien'] = json_encode($hasilDiagnosa['gejala_pasien']);
+        $hasilDiagnosa['bobot_diagnosa'] = $nilaiMax;
+        $hasilDiagnosa['persentase_diagnosa'] = $nilaiMax * 100;
 
         $newDataRiwayatPasien = new DataRiwayatPasien();
         $newDataRiwayatPasien->tanggal_jam_diagnosa = Carbon::now();
         $newDataRiwayatPasien->kode_pasien = $hasilDiagnosa['kode_pasien'];
         $newDataRiwayatPasien->nama_pasien = $hasilDiagnosa['nama_pasien'];
         $newDataRiwayatPasien->gejala_pasien = $hasilDiagnosa['gejala_pasien'];
-        $newDataRiwayatPasien->hasil_diagnosa = $hasilDiagnosa['hasil_diagnosa'];
+        $newDataRiwayatPasien->hasil_diagnosa = json_encode([
+            'hasil_diagnosa' => $hasilDiagnosa['hasil_diagnosa'],
+            'bobot_diagnosa' => $hasilDiagnosa['bobot_diagnosa'],
+            'persentase_diagnosa' => $hasilDiagnosa['persentase_diagnosa']
+        ]);
         $newDataRiwayatPasien->save();
 
         $idSavedData = $newDataRiwayatPasien->id_pasien;
