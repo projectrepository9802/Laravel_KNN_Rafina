@@ -16,11 +16,11 @@ class DataBasisPengetahuan extends Model
 
     public function datapenyakit()
     {
-        return $this->belongsTo(DataPenyakit::class, 'id_penyakit', 'id_penyakit');
+        return $this->hasOne(DataPenyakit::class, 'id_penyakit', 'id_penyakit');
     }
 
     public function datagejala()
     {
-        return $this->belongsTo(DataGejala::class, 'id_gejala', 'id_gejala');
+        return $this->hasOne(DataGejala::class, 'id_gejala', 'id_gejala');
     }
 }

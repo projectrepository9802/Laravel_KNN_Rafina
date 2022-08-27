@@ -12,7 +12,7 @@
         </div>
 
         <div class="card">
-            <div class="card-header bg-primary bg-gradient">
+            <div class="card-header bg-gradient-custom">
                 <h6 class="card-title p-0 m-0 fw-bold text-white">
                     <i class="fas fa-plus me-1"></i>
                     Tambah {{ $titlePage }}
@@ -23,9 +23,9 @@
                     @csrf
                     <div class="mb-3">
                         <label for="kode_gejala" class="form-label">Kode Gejala</label>
-                        <input type="text" class="form-control @error('kode_gejala') is-invalid @enderror" id="kode_gejala"
-                            name="kode_gejala" placeholder="Masukkan Kode Gejala..." value="{{ old('kode_gejala') }}"
-                            autofocus>
+                        <input type="text" class="form-control @error('kode_gejala') is-invalid @enderror"
+                            id="kode_gejala" name="kode_gejala" placeholder="Masukkan Kode Gejala..."
+                            value="{{ old('kode_gejala') }}" autofocus>
                         @error('kode_gejala')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -34,8 +34,9 @@
                     </div>
                     <div class="mb-3">
                         <label for="nama_gejala" class="form-label">Nama Gejala</label>
-                        <input type="text" class="form-control @error('nama_gejala') is-invalid @enderror" id="nama_gejala"
-                            name="nama_gejala" placeholder="Masukkan Nama Gejala..." value="{{ old('nama_gejala') }}">
+                        <input type="text" class="form-control @error('nama_gejala') is-invalid @enderror"
+                            id="nama_gejala" name="nama_gejala" placeholder="Masukkan Nama Gejala..."
+                            value="{{ old('nama_gejala') }}">
                         @error('nama_gejala')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -43,7 +44,7 @@
                         @enderror
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-success me-md-2">
+                        <button type="submit" class="btn btn-gradient-custom me-md-2">
                             <i class="fas fa-save me-1"></i>
                             Simpan Data
                         </button>

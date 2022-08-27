@@ -18,7 +18,7 @@
         </div>
 
         <div class="card">
-            <div class="card-header bg-primary bg-gradient">
+            <div class="card-header bg-gradient-custom">
                 <h6 class="card-title p-0 m-0 fw-bold text-white">
                     <i class="fas fa-info-circle me-1"></i>
                     Informasi {{ $titlePage }}
@@ -41,7 +41,8 @@
                         </symbol>
                     </svg>
                     <div class="alert alert-success alert-dismissible d-flex align-items-center fade show" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                            aria-label="Success:">
                             <use xlink:href="#check-circle-fill" />
                         </svg>
                         <div>
@@ -51,12 +52,12 @@
                     </div>
                 @endif
 
-                <a href="{{ URL::to('data-basis-pengetahuan/create') }}" class="btn btn-primary mb-3">
+                <a href="{{ URL::to('data-basis-pengetahuan/create') }}" class="btn btn-gradient-custom mb-3">
                     <i class="fas fa-plus me-1"></i>
                     Tambah {{ $titlePage }}
                 </a>
                 <table class="table table-bordered" id="dataTable" style="width: 100%;">
-                    <thead class="bg-primary bg-gradient">
+                    <thead class="bg-gradient-custom">
                         <tr class="text-white text-center">
                             <th class="align-middle text-center">No.</th>
                             <th class="align-middle text-center">Detail Penyakit</th>
@@ -70,21 +71,24 @@
                             $i = 1;
                         @endphp
                         @foreach ($dataBasisPengetahuan as $basispengetahuan)
-                            <tr class="text-white">
+                            <tr>
                                 <td class="align-middle text-center">{{ $i }}</td>
                                 <td class="align-middle text-center">
-                                    {{ $basispengetahuan->datapenyakit->kode_penyakit . ' - ' . $basispengetahuan->datapenyakit->nama_penyakit }}
+                                    {{ $basispengetahuan->datapenyakit->kode_penyakit ?? 'Kode Penyakit Not Defined' }} -
+                                    {{ $basispengetahuan->datapenyakit->nama_penyakit ?? 'Nama Penyakit Not Defined' }}
                                 </td>
-                                <td class="align-middle" style="text-align: justify;">
-                                    {{ $basispengetahuan->datagejala->kode_gejala . ' - ' . $basispengetahuan->datagejala->nama_gejala }}
+                                <td class="align-middle text-center">
+                                    {{ $basispengetahuan->datagejala->kode_gejala ?? 'Kode Gejala Not Defined' }} -
+                                    {{ $basispengetahuan->datagejala->nama_gejala ?? 'Nama Gejala Not Defined' }}
                                 </td>
                                 <td class="align-middle text-center">
                                     {{ $basispengetahuan->nilai_bobot }}
                                 </td>
-                                <td class="align-middle text-center">
+                                <td class="align-middle text-center d-flex">
                                     <a href="{{ URL::to('data-basis-pengetahuan/' . $basispengetahuan->id_basis_pengetahuan . '/edit') }}"
                                         class="btn btn-warning text-white">
                                         <i class="fas fa-edit me-1"></i>
+                                        </br>
                                         Edit Data
                                     </a>
                                     <form
@@ -94,6 +98,7 @@
                                         @method('DELETE')
                                         <button class="btn btn-danger" type="submit">
                                             <i class="fas fa-trash me-1"></i>
+                                            </br>
                                             Hapus Data
                                         </button>
                                     </form>

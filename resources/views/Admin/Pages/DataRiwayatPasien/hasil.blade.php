@@ -12,12 +12,12 @@
         </div>
 
         <div class="card">
-            <div class="card-header bg-primary bg-gradient d-flex justify-content-between">
+            <div class="card-header bg-gradient-custom d-flex justify-content-between">
                 <h6 class="card-title p-0 m-0 fw-bold text-white py-3">
                     <i class="fas fa-info-circle me-1"></i>
                     {{ $titlePage }}
                 </h6>
-                <button class="btn btn-success" onclick="window.print();">
+                <button class="btn btn-info" onclick="window.print();">
                     <i class="fas fa-print me-1"></i>
                     Print Hasil Diagnosa
                 </button>
@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="card mb-4">
-                    <div class="card-header bg-success bg-gradient">
+                    <div class="card-header bg-gradient-custom">
                         <p class="p-0 m-0 fw-bold card-title text-white">Gejala Pasien</p>
                     </div>
                     <div class="card-body">
@@ -60,7 +60,7 @@
                                 <col style="width: 15%;">
                                 <col style="width: 80%;">
                             </colgroup>
-                            <thead class="bg-success bg-gradient text-white">
+                            <thead class="bg-gradient-custom">
                                 <tr>
                                     <th class="align-middle text-center">No.</th>
                                     <th class="align-middle text-center">Kode Gejala</th>
@@ -86,7 +86,7 @@
                     </div>
                 </div>
 
-                <a href="{{ URL::to('data-riwayat-pasien') }}" class="btn btn-primary">
+                <a href="{{ URL::to('data-riwayat-pasien') }}" class="btn btn-gradient-custom">
                     <i class="fas fa-arrow-alt-circle-left me-1"></i>
                     Kembali Ke Halaman Data Riwayat Pasien
                 </a>

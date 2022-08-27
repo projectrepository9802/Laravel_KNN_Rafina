@@ -1,4 +1,4 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-custom sidebar sidebar-dark accordion" id="accordionSidebar">
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ URL::to('dashboard') }}">
         <div class="sidebar-brand-icon">
@@ -39,7 +39,7 @@
     <li class="nav-item {{ Request::segment(1) === 'data-basis-pengetahuan' ? 'active' : null }}">
         <a class="nav-link" href="{{ URL::to('data-basis-pengetahuan') }}">
             <i class="fas fa-user-md"></i>
-            <span>Data Basis Pengetahuan</span>
+            <span>Data Basis Kasus</span>
         </a>
     </li>
     <!-- Nav Item - Data Riwayat Kasus -->

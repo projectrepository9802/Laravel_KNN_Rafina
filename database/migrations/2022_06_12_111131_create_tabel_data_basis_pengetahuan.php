@@ -17,8 +17,8 @@ return new class extends Migration
     {
         Schema::create('tabel_data_basis_pengetahuan', function (Blueprint $table) {
             $table->id('id_basis_pengetahuan');
-            $table->integer('id_penyakit', false, true);
-            $table->integer('id_gejala', false, true);
+            $table->foreignId('id_penyakit');
+            $table->foreignId('id_gejala');
             $table->double('nilai_bobot', false, true);
             $table->timestamps();
         });

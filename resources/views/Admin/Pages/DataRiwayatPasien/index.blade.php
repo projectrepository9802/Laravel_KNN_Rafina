@@ -18,7 +18,7 @@
         </div>
 
         <div class="card">
-            <div class="card-header bg-primary bg-gradient">
+            <div class="card-header bg-gradient-custom">
                 <h6 class="card-title p-0 m-0 fw-bold text-white">
                     <i class="fas fa-info-circle me-1"></i>
                     Informasi {{ $titlePage }}
@@ -41,7 +41,8 @@
                         </symbol>
                     </svg>
                     <div class="alert alert-success alert-dismissible d-flex align-items-center fade show" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                            aria-label="Success:">
                             <use xlink:href="#check-circle-fill" />
                         </svg>
                         <div>
@@ -52,7 +53,7 @@
                 @endif
 
                 <table class="table table-bordered" id="dataTable" style="width: 100%;">
-                    <thead class="bg-primary bg-gradient">
+                    <thead class="bg-gradient-custom">
                         <tr class="text-white text-center">
                             <th class="align-middle text-center">No.</th>
                             <th class="align-middle text-center">Tanggal dan Jam Diagnosa</th>

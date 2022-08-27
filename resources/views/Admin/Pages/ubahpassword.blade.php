@@ -12,7 +12,7 @@
         </div>
 
         <div class="card">
-            <div class="card-header bg-primary bg-gradient">
+            <div class="card-header bg-gradient-custom">
                 <h6 class="card-title p-0 m-0 fw-bold text-white">
                     <i class="fas fa-lock me-1"></i>
                     Laman {{ $titlePage }}
@@ -35,7 +35,8 @@
                         </symbol>
                     </svg>
                     <div class="alert alert-success alert-dismissible d-flex align-items-center fade show" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                            aria-label="Success:">
                             <use xlink:href="#check-circle-fill" />
                         </svg>
                         <div>
@@ -68,7 +69,7 @@
                         @enderror
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-success me-md-2">
+                        <button type="submit" class="btn btn-gradient-custom me-md-2">
                             <i class="fas fa-save me-1"></i>
                             Simpan Data
                         </button>

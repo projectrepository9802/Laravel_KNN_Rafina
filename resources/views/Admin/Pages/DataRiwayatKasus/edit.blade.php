@@ -12,7 +12,7 @@
         </div>
 
         <div class="card">
-            <div class="card-header bg-primary bg-gradient">
+            <div class="card-header bg-gradient-custom">
                 <h6 class="card-title p-0 m-0 fw-bold text-white">
                     <i class="fas fa-edit me-1"></i>
                     Ubah {{ $titlePage }}
@@ -36,7 +36,7 @@
                     <div class="mb-3">
                         <label for="daftar_gejala" class="form-label">Daftar Gejala</label>
                         <div id="containerSolusi">
-                            <button class="btn btn-primary mb-3" type="button" id="btnTambahDaftarGejala"
+                            <button class="btn btn-gradient-custom mb-3" type="button" id="btnTambahDaftarGejala"
                                 onclick="addInput('daftarGejala');">
                                 <i class="fas fa-plus me-1"></i>
                                 Tambah Gejala
@@ -148,7 +148,7 @@
                         @enderror
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-success me-md-2">
+                        <button type="submit" class="btn btn-gradient-custom me-md-2">
                             <i class="fas fa-save me-1"></i>
                             Simpan Data
                         </button>

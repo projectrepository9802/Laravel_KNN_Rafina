@@ -12,7 +12,7 @@
         </div>
 
         <div class="card">
-            <div class="card-header bg-primary bg-gradient">
+            <div class="card-header bg-gradient-custom">
                 <h6 class="card-title p-0 m-0 fw-bold text-white">
                     <i class="fas fa-edit me-1"></i>
                     Ubah {{ $titlePage }}
@@ -71,8 +71,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="nilai_bobot" class="form-label">Nilai Bobot</label>
-                        <input type="text" class="form-control @error('nilai_bobot') is-invalid @enderror" id="nilai_bobot"
-                            name="nilai_bobot" placeholder="Masukkan Nilai Bobot..."
+                        <input type="text" class="form-control @error('nilai_bobot') is-invalid @enderror"
+                            id="nilai_bobot" name="nilai_bobot" placeholder="Masukkan Nilai Bobot..."
                             value="{{ old('nilai_bobot', $dataBasisPengetahuan->nilai_bobot) }}">
                         @error('nilai_bobot')
                             <div class="invalid-feedback">
@@ -81,7 +81,7 @@
                         @enderror
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-success me-md-2">
+                        <button type="submit" class="btn btn-gradient-custom me-md-2">
                             <i class="fas fa-save me-1"></i>
                             Simpan Data
                         </button>

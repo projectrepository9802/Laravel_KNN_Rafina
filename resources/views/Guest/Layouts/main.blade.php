@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="{{ URL::to('lib/bootstrap/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::to('bin/css/style.css') }}">
 
+    <style>
+        .bg-gradient-custom,
+        .btn-gradient-custom {
+            color: white;
+            background-color: #BF00FF;
+            background-image: linear-gradient(180deg, #BF00FF 10%, #BF00FF 100%);
+            background-size: cover;
+        }
+
+        .btn-gradient-custom:hover {
+            color: white;
+            background-color: #BF00FF;
+            background-image: linear-gradient(180deg, #BF00FF 10%, #BF00FF 100%);
+            background-size: cover;
+        }
+    </style>
     <title>SP K-Nearest Neighbor | {{ $titlePage }}</title>
 </head>
 

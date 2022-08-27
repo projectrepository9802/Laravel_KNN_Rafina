@@ -4,9 +4,9 @@
     <div class="container-fluid p-0 m-0 my-5">
         <h3 class="text-center mb-5 text-white fw-bold">Hasil Diagnosa</h3>
         <div class="card">
-            <div class="card-header bg-success bg-gradient d-flex justify-content-between">
+            <div class="card-header bg-gradient-custom d-flex justify-content-between">
                 <p class="card-title p-0 m-0 fw-bold text-white">Laman Hasil Diagnosa</p>
-                <button class="btn btn-primary" onclick="window.print();">
+                <button class="btn btn-info" onclick="window.print();">
                     <i class="fas fa-print me-1"></i>
                     Print Hasil Diagnosa
                 </button>
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="card mb-4">
-                    <div class="card-header bg-success bg-gradient">
+                    <div class="card-header bg-gradient-custom">
                         <p class="p-0 m-0 fw-bold card-title text-white">Gejala Pasien</p>
                     </div>
                     <div class="card-body">
@@ -49,7 +49,7 @@
                                 <col style="width: 15%;">
                                 <col style="width: 80%;">
                             </colgroup>
-                            <thead class="bg-success bg-gradient text-white">
+                            <thead class="bg-gradient-custom">
                                 <tr>
                                     <th class="align-middle text-center">No.</th>
                                     <th class="align-middle text-center">Kode Gejala</th>
@@ -75,7 +75,7 @@
                     </div>
                 </div>
 
-                <a href="{{ URL::to('diagnosa') }}" class="btn btn-primary">
+                <a href="{{ URL::to('diagnosa') }}" class="btn btn-gradient-custom">
                     <i class="fas fa-arrow-alt-circle-left"></i>
                     Kembali Ke Halaman Diagnosa
                 </a>

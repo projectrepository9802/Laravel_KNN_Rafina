@@ -18,7 +18,7 @@ class DataBasisPengetahuanController extends Controller
     public function index()
     {
         $datas = [
-            'titlePage' => 'Data Basis Pengetahuan',
+            'titlePage' => 'Data Basis Kasus',
             'dataBasisPengetahuan' => DataBasisPengetahuan::all()
         ];
 
@@ -33,7 +33,7 @@ class DataBasisPengetahuanController extends Controller
     public function create()
     {
         $datas = [
-            'titlePage' => 'Data Basis Pengetahuan',
+            'titlePage' => 'Data Basis Kasus',
             'dataPenyakit' => DataPenyakit::all(),
             'dataGejala' => DataGejala::all()
         ];
@@ -91,7 +91,7 @@ class DataBasisPengetahuanController extends Controller
     public function edit(DataBasisPengetahuan $dataBasisPengetahuan)
     {
         $datas = [
-            'titlePage' => 'Data Basis Pengetahuan',
+            'titlePage' => 'Data Basis Kasus',
             'dataPenyakit' => DataPenyakit::all(),
             'dataGejala' => DataGejala::all(),
             'dataBasisPengetahuan' => $dataBasisPengetahuan
