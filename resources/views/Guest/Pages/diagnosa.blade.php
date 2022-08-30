@@ -1,8 +1,8 @@
-@extends('Guest.Layouts.main')
+@extends('Admin.Layouts.main')
 
 @section('content-wrapper')
-    <div class="container-fluid pb-5" style="height: 100%;">
-        <h3 class="text-center pb-5 pt-5 text-white fw-bold">Halaman Diagnosa</h3>
+    <div class="container-fluid">
+        <h3 class="text-center fw-bold mb-3">Halaman Diagnosa</h3>
         @if (session()->has('notificationArea'))
             <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                 <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
@@ -28,11 +28,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-        <div class="card" style="height: 70%;">
+        <div class="card">
             <div class="card-header text-white fw-bold" style="background-color: #BF00FF;">
                 Konsultasi Gejala
             </div>
-            <div class="card-body" style="height: 100%;">
+            <div class="card-body">
                 <form action="{{ URL::to('diagnosa') }}" method="POST">
                     @csrf
                     <div class="mb-3 row">
@@ -75,7 +75,6 @@
                     @enderror
                     <style>
                         .table {
-                            max-height: 140px;
                             overflow: auto;
                             display: inline-block;
                         }

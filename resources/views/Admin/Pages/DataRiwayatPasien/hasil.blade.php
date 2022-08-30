@@ -44,7 +44,7 @@
                 <div class="row mb-4">
                     <div class="col-sm-4">
                         <p class="p-0 m-0"><strong>Nama Penyakit</strong> :
-                            {{ $dataPasien->hasil_diagnosa }}
+                            {{ json_decode(json_decode($dataPasien->hasil_diagnosa)->hasil_diagnosa)->nama_penyakit }}
                         </p>
                     </div>
                 </div>
@@ -83,6 +83,17 @@
                                 @endforeach
                             </tbody>
                         </table>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-gradient-custom">
+                        <p class="p-0 m-0 fw-bold card-title text-white">Solusi Penyakit</p>
+                    </div>
+                    <div class="card-body">
+                        <p style="text-align: justify;">
+                            {{ json_decode(json_decode($dataPasien->hasil_diagnosa)->hasil_diagnosa)->solusi_penyakit }}
+                        </p>
                     </div>
                 </div>
 

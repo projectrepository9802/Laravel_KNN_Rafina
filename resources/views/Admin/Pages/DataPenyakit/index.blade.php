@@ -52,25 +52,18 @@
                     </div>
                 @endif
 
-                <a href="{{ URL::to('data-penyakit/create') }}" class="btn btn-gradient-custom mb-3">
+                {{-- <a href="{{ URL::to('data-penyakit/create') }}" class="btn btn-gradient-custom mb-3">
                     <i class="fas fa-plus me-1"></i>
                     Tambah {{ $titlePage }}
-                </a>
+                </a> --}}
                 <table class="table table-bordered" id="dataTable" style="width: 100%;">
-                    <colgroup>
-                        <col style="width: 5%;">
-                        <col style="width: 15%;">
-                        <col style="width: 15%;">
-                        <col style="width: 30%;">
-                        <col style="width: 35%;">
-                    </colgroup>
                     <thead class="bg-gradient-custom">
                         <tr class="text-white text-center">
                             <th class="align-middle text-center">No.</th>
                             <th class="align-middle text-center">Kode Penyakit</th>
                             <th class="align-middle text-center">Nama Penyakit</th>
                             <th class="align-middle text-center">Solusi Penyakit</th>
-                            <th class="align-middle text-center"></th>
+                            {{-- <th class="align-middle text-center"></th> --}}
                         </tr>
                     </thead>
                     <tbody class="bg-secondary bg-gradient text-white">
@@ -82,8 +75,8 @@
                                 <td class="align-middle text-center">{{ $i }}</td>
                                 <td class="align-middle text-center">{{ $penyakit->kode_penyakit }}</td>
                                 <td class="align-middle text-center">{{ $penyakit->nama_penyakit }}</td>
-                                <td class="align-middle text-center">{{ $penyakit->solusi_penyakit }}</td>
-                                <td class="align-middle text-center">
+                                <td class="align-middle" style="text-align: justify;">{{ $penyakit->solusi_penyakit }}</td>
+                                {{-- <td class="align-middle text-center">
                                     <a href="{{ URL::to('data-penyakit/' . $penyakit->id_penyakit . '/edit') }}"
                                         class="btn btn-warning text-white">
                                         <i class="fas fa-edit me-1"></i>
@@ -98,7 +91,7 @@
                                             Hapus Data
                                         </button>
                                     </form>
-                                </td>
+                                </td> --}}
                             </tr>
                             @php
                                 $i++;

@@ -52,18 +52,18 @@
                     </div>
                 @endif
 
-                <a href="{{ URL::to('data-basis-pengetahuan/create') }}" class="btn btn-gradient-custom mb-3">
+                {{-- <a href="{{ URL::to('data-basis-pengetahuan/create') }}" class="btn btn-gradient-custom mb-3">
                     <i class="fas fa-plus me-1"></i>
                     Tambah {{ $titlePage }}
-                </a>
+                </a> --}}
                 <table class="table table-bordered" id="dataTable" style="width: 100%;">
                     <thead class="bg-gradient-custom">
                         <tr class="text-white text-center">
                             <th class="align-middle text-center">No.</th>
-                            <th class="align-middle text-center">Detail Penyakit</th>
-                            <th class="align-middle text-center">Detail Gejala</th>
+                            <th class="align-middle text-center">Nama Penyakit</th>
+                            <th class="align-middle text-center">Nama Gejala</th>
                             <th class="align-middle text-center">Nilai Bobot</th>
-                            <th></th>
+                            {{-- <th></th> --}}
                         </tr>
                     </thead>
                     <tbody class="bg-secondary bg-gradient text-white">
@@ -84,7 +84,7 @@
                                 <td class="align-middle text-center">
                                     {{ $basispengetahuan->nilai_bobot }}
                                 </td>
-                                <td class="align-middle text-center d-flex">
+                                {{-- <td class="align-middle text-center d-flex">
                                     <a href="{{ URL::to('data-basis-pengetahuan/' . $basispengetahuan->id_basis_pengetahuan . '/edit') }}"
                                         class="btn btn-warning text-white">
                                         <i class="fas fa-edit me-1"></i>
@@ -102,7 +102,7 @@
                                             Hapus Data
                                         </button>
                                     </form>
-                                </td>
+                                </td> --}}
                             </tr>
                             @php
                                 $i++;

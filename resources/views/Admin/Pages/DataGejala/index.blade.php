@@ -57,18 +57,18 @@
                     Tambah {{ $titlePage }}
                 </a>
                 <table class="table table-bordered" id="dataTable" style="width: 100%;">
-                    <colgroup>
+                    {{-- <colgroup>
                         <col style="width: 5%;">
                         <col style="width: 15%;">
                         <col style="width: 50%;">
                         <col style="width: 30%;">
-                    </colgroup>
+                    </colgroup> --}}
                     <thead class="bg-primary bg-gradient-custom">
                         <tr class="text-white text-center">
                             <th class="align-middle text-center">No.</th>
                             <th class="align-middle text-center">Kode Gejala</th>
                             <th class="align-middle text-center">Nama Gejala</th>
-                            <th class="align-middle text-center"></th>
+                            {{-- <th class="align-middle text-center"></th> --}}
                         </tr>
                     </thead>
                     <tbody class="bg-secondary bg-gradient text-white">
@@ -80,7 +80,7 @@
                                 <td class="align-middle text-center">{{ $i }}</td>
                                 <td class="align-middle text-center">{{ $gejala->kode_gejala }}</td>
                                 <td class="align-middle">{{ $gejala->nama_gejala }}</td>
-                                <td class="align-middle text-center">
+                                {{-- <td class="align-middle text-center">
                                     <a href="{{ URL::to('data-gejala/' . $gejala->id_gejala . '/edit') }}"
                                         class="btn btn-warning text-white">
                                         <i class="fas fa-edit me-1"></i>
@@ -95,7 +95,7 @@
                                             Hapus Data
                                         </button>
                                     </form>
-                                </td>
+                                </td> --}}
                             </tr>
                             @php
                                 $i++;

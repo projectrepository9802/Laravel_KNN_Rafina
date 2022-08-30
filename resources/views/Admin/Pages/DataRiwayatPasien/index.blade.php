@@ -85,14 +85,16 @@
                                         @endforeach
                                     </ul>
                                 </td>
-                                <td class="align-middle text-center">{{ $pasien->hasil_diagnosa }}</td>
+                                <td class="align-middle text-center">
+                                    {{ json_decode(json_decode($pasien->hasil_diagnosa)->hasil_diagnosa)->nama_penyakit }}
+                                </td>
                                 <td class="align-middle text-center">
                                     <a href="{{ URL::to('data-riwayat-pasien/' . $pasien->id_pasien) }}"
                                         class="btn btn-primary">
                                         <i class="fas fa-eye me-1"></i>
                                         Lihat Data
                                     </a>
-                                    <form action="{{ URL::to('data-riwayat-pasien/' . $pasien->id_pasien) }}"
+                                    {{-- <form action="{{ URL::to('data-riwayat-pasien/' . $pasien->id_pasien) }}"
                                         method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
@@ -100,7 +102,7 @@
                                             <i class="fas fa-trash me-1"></i>
                                             Hapus Data
                                         </button>
-                                    </form>
+                                    </form> --}}
                                 </td>
                             </tr>
                             @php

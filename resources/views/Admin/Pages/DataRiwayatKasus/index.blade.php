@@ -52,25 +52,18 @@
                     </div>
                 @endif
 
-                <a href="{{ URL::to('data-riwayat-kasus/create') }}" class="btn btn-gradient-custom mb-3">
+                {{-- <a href="{{ URL::to('data-riwayat-kasus/create') }}" class="btn btn-gradient-custom mb-3">
                     <i class="fas fa-plus me-1"></i>
                     Tambah <?= $titlePage ?>
-                </a>
+                </a> --}}
                 <table class="table table-bordered" id="dataTable" style="width: 100%;">
-                    <colgroup>
-                        <col style="width: 5%;">
-                        <col style="width: 15%;">
-                        <col style="width: 30%;">
-                        <col style="width: 15%;">
-                        <col style="width: 35%;">
-                    </colgroup>
                     <thead class="bg-gradient-custom">
                         <tr class="text-white text-center">
                             <th class="align-middle text-center">No.</th>
                             <th class="align-middle text-center">Kode Kasus</th>
                             <th class="align-middle text-center">Daftar Gejala</th>
                             <th class="align-middle text-center">Hasil Diagnosa</th>
-                            <th class="align-middle text-center"></th>
+                            {{-- <th class="align-middle text-center"></th> --}}
                         </tr>
                     </thead>
                     <tbody class="bg-secondary bg-gradient text-white">
@@ -97,7 +90,7 @@
                                     </ul>
                                 </td>
                                 <td class="align-middle text-center">{{ $riwayatkasus->hasil_diagnosa }}</td>
-                                <td class="align-middle text-center">
+                                {{-- <td class="align-middle text-center">
                                     <a href="{{ URL::to('data-riwayat-kasus/' . $riwayatkasus->id_kasus . '/edit') }}"
                                         class="btn btn-warning text-white">
                                         <i class="fas fa-edit me-1"></i>
@@ -112,7 +105,7 @@
                                             Hapus Data
                                         </button>
                                     </form>
-                                </td>
+                                </td> --}}
                             </tr>
                             @php
                                 $i++;

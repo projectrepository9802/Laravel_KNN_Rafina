@@ -1,9 +1,9 @@
-@extends('Guest.Layouts.main')
+@extends('Admin.Layouts.main')
 
 @section('content-wrapper')
     <div class="container-fluid">
-        <h3 class="text-center pt-5 text-white fw-bold mb-5">Informasi Penyakit</h3>
-        <div class="accordion mb-5">
+        <h3 class="text-center pt-2 fw-bold mb-4">Informasi Penyakit</h3>
+        <div class="accordion mb-5 px-5 py-5 bg-gradient-custom rounded">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"

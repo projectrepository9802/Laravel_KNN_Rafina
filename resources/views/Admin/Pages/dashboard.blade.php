@@ -4,16 +4,23 @@
     <div class="container-fluid">
 
         <!-- Page Heading -->
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800 font-weight-bold">
-                <i class="fas fa-fw fa-tachometer-alt mr-1"></i>
-                {{ $titlePage }}
+        <div class="d-sm-flex align-items-center justify-content-between mb-5">
+            <h1 class="h3 mb-0 text-gray-800 font-weight-bold text-center">
+                Penerapan Sistem Pakar Mendiagnosa Penyakit Paru - Paru Menggunakan Algoritma KNN
             </h1>
+        </div>
+
+        <div class="row mb-4">
+            <p style="text-align: justify;">
+                Algoritma K-Nearest Neighbor adalah Algoritma Supervised Leaning dimana hasil dari instance yang baru
+                diklarifikasi berdasarkan mayoritas dari kedekatan jarak dari kategori yang ada dalam K-Nearest Neighbor.
+                Tujuan Algoritma K-Nearest Neighbor adalah untuk mengklarifikas objek berdasarkan atribut dan sample-sample
+                dari training sample.
+            </p>
         </div>
 
         <!-- Content Row -->
         <div class="row">
-
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-4 col-md-6 mb-4">
                 <div class="card h-100 py-2 bg-primary bg-gradient shadow">

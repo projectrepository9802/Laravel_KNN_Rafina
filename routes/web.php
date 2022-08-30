@@ -24,27 +24,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['guest'])->group(function () {
-    Route::get('/', [BerandaController::class, 'index']);
-    Route::get('/diagnosa', [DiagnosaController::class, 'index']);
-    Route::post('/diagnosa', [DiagnosaController::class, 'prosesData']);
-    Route::get('/diagnosa/{id_pasien}', [DiagnosaController::class, 'showData']);
-    Route::get('/informasi-penyakit', [InformasiPenyakitController::class, 'index']);
+// Route::get('/', [BerandaController::class, 'index']);
 
-    Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
-    Route::post('/login', [AuthController::class, 'loginProcess']);
-    Route::get('/lupa-password', [AuthController::class, 'lupapasswordPage']);
-    Route::post('/lupa-password', [AuthController::class, 'lupapasswordProcess']);
-});
+// Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
+// Route::post('/login', [AuthController::class, 'loginProcess']);
+// Route::get('/lupa-password', [AuthController::class, 'lupapasswordPage']);
+// Route::post('/lupa-password', [AuthController::class, 'lupapasswordProcess']);
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::resource('data-penyakit', DataPenyakitController::class)->except('show');
-    Route::resource('data-gejala', DataGejalaController::class)->except('show');
-    Route::resource('data-basis-pengetahuan', DataBasisPengetahuanController::class)->except('show');
-    Route::resource('data-riwayat-kasus', DataRiwayatKasusController::class)->except('show');
-    Route::resource('data-riwayat-pasien', DataRiwayatPasienController::class)->except(['create', 'store', 'edit', 'update']);
-    Route::get('ubah-password', [UbahPasswordController::class, 'index']);
-    Route::post('ubah-password', [UbahPasswordController::class, 'prosesUbahPassword']);
-    Route::post('logout', [AuthController::class, 'logout']);
-});
+Route::get('/', [DashboardController::class, 'index']);
+Route::resource('data-penyakit', DataPenyakitController::class)->except('show');
+Route::resource('data-gejala', DataGejalaController::class)->except('show');
+Route::resource('data-basis-pengetahuan', DataBasisPengetahuanController::class)->except('show');
+Route::resource('data-riwayat-kasus', DataRiwayatKasusController::class)->except('show');
+Route::resource('data-riwayat-pasien', DataRiwayatPasienController::class)->except(['create', 'store', 'edit', 'update']);
+Route::get('ubah-password', [UbahPasswordController::class, 'index']);
+Route::post('ubah-password', [UbahPasswordController::class, 'prosesUbahPassword']);
+Route::post('logout', [AuthController::class, 'logout']);
+
+Route::get('/diagnosa', [DiagnosaController::class, 'index']);
+Route::post('/diagnosa', [DiagnosaController::class, 'prosesData']);
+Route::get('/diagnosa/{id_pasien}', [DiagnosaController::class, 'showData']);
+Route::get('/informasi-penyakit', [InformasiPenyakitController::class, 'index']);

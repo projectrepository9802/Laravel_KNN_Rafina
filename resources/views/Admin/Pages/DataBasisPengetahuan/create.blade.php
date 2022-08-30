@@ -22,10 +22,10 @@
                 <form action="{{ URL::to('data-basis-pengetahuan') }}" method="POST">
                     @csrf
                     <div class="mb-3">
-                        <label for="id_penyakit" class="form-label">Detail Penyakit</label>
+                        <label for="id_penyakit" class="form-label">Nama Penyakit</label>
                         <select class="form-select @error('id_penyakit') is-invalid @enderror" name="id_penyakit"
                             id="id_penyakit">
-                            <option selected disabled>Pilih Detail Penyakit...</option>
+                            <option selected disabled>Pilih Nama Penyakit...</option>
                             @foreach ($dataPenyakit as $penyakit)
                                 @if (old('id_penyakit') == $penyakit->id_penyakit)
                                     <option value="{{ $penyakit->id_penyakit }}" selected>
@@ -45,10 +45,10 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="id_gejala" class="form-label">Detail Gejala</label>
+                        <label for="id_gejala" class="form-label">Nama Gejala</label>
                         <select class="form-select @error('id_gejala') is-invalid @enderror" name="id_gejala"
                             id="id_gejala">
-                            <option selected disabled>Pilih Detail Gejala...</option>
+                            <option selected disabled>Pilih Nama Gejala...</option>
                             @foreach ($dataGejala as $gejala)
                                 @if (old('id_gejala') == $gejala->id_gejala)
                                     <option value="{{ $gejala->id_gejala }}" selected>

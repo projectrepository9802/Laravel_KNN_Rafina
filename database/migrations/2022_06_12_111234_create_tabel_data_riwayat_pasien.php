@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('kode_pasien');
             $table->string('nama_pasien');
             $table->longText('gejala_pasien');
-            $table->string('hasil_diagnosa');
+            $table->longText('hasil_diagnosa');
             $table->timestamps();
         });
     }

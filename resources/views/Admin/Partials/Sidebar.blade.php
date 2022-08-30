@@ -9,10 +9,29 @@
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item {{ Request::segment(1) === 'dashboard' ? 'active' : null }}">
-        <a class="nav-link" href="{{ URL::to('dashboard') }}">
+    <li class="nav-item {{ Request::segment(1) === null ? 'active' : null }}">
+        <a class="nav-link" href="{{ URL::to('/') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
+            <span>Beranda</span>
+        </a>
+    </li>
+    <hr class="sidebar-divider">
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Tampilan User
+    </div>
+    <!-- Nav Item - Data Penyakit -->
+    <li class="nav-item {{ Request::segment(1) === 'diagnosa' ? 'active' : null }}">
+        <a class="nav-link" href="{{ URL::to('diagnosa') }}">
+            <i class="fas fa-viruses"></i>
+            <span>Diagnosa</span>
+        </a>
+    </li>
+    <!-- Nav Item - Data Gejala -->
+    <li class="nav-item {{ Request::segment(1) === 'informasi-penyakit' ? 'active' : null }}">
+        <a class="nav-link" href="{{ URL::to('informasi-penyakit') }}">
+            <i class="fas fa-hand-holding-medical"></i>
+            <span>Informasi</span>
         </a>
     </li>
     <!-- Divider -->

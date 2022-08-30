@@ -87,9 +87,21 @@ class DiagnosaController extends Controller
 
         $namaPenyakitBaru = DataRiwayatKasus::where('kode_kasus', $kodeKasusSearch)->first()->hasil_diagnosa;
 
-        $hasilDiagnosa['kode_pasien'] = "DP" . date('YmdHis');
+        $kodePasien = DataRiwayatKasus::latest('kode_kasus')->first()->kode_kasus;
+
+        $kodePasienArr = str_split($kodePasien);
+        if ($kodePasienArr[1] == 0) {
+            $kodePasienArr = '0' . (str_split($kodePasien)[2] + 1);
+        } else {
+            unset($kodePasienArr[0]);
+            $kodePasienArr = implode('', $kodePasienArr) + 1;
+        }
+
+        $hasilDiagnosa['kode_pasien'] = "D" . $kodePasienArr;
         $hasilDiagnosa['nama_pasien'] = $validReq['nama_pasien'];
-        $hasilDiagnosa['hasil_diagnosa'] = $namaPenyakitBaru;
+        $hasilDiagnosa['hasil_diagnosa']['nama_penyakit'] = $namaPenyakitBaru;
+        $hasilDiagnosa['hasil_diagnosa']['solusi_penyakit'] = DataPenyakit::where('nama_penyakit', $namaPenyakitBaru)->first()->solusi_penyakit;
+        $hasilDiagnosa['hasil_diagnosa'] = json_encode($hasilDiagnosa['hasil_diagnosa']);
         foreach ($validReq['GejalaUser'] as $key => $value) {
             $hasilDiagnosa['gejala_pasien'][$key]['kode_gejala'] = $value;
             $hasilDiagnosa['gejala_pasien'][$key]['nama_gejala'] = DataGejala::where('kode_gejala', $value)->first()->nama_gejala;

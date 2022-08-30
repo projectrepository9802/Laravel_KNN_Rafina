@@ -1,8 +1,8 @@
-@extends('Guest.Layouts.main')
+@extends('Admin.Layouts.main')
 
 @section('content-wrapper')
-    <div class="container-fluid p-0 m-0 my-5">
-        <h3 class="text-center mb-5 text-white fw-bold">Hasil Diagnosa</h3>
+    <div class="container-fluid p-0 m-0 my-5 px-3">
+        <h3 class="text-center mb-5 fw-bold">Hasil Diagnosa</h3>
         <div class="card">
             <div class="card-header bg-gradient-custom d-flex justify-content-between">
                 <p class="card-title p-0 m-0 fw-bold text-white">Laman Hasil Diagnosa</p>
@@ -33,7 +33,7 @@
                 <div class="row mb-4">
                     <div class="col-sm-4">
                         <p class="p-0 m-0"><strong>Nama Penyakit</strong> :
-                            {{ json_decode($dataPasien->hasil_diagnosa)->hasil_diagnosa }}
+                            {{ json_decode(json_decode($dataPasien->hasil_diagnosa)->hasil_diagnosa)->nama_penyakit }}
                         </p>
                     </div>
                     <div class="col-sm-4">
@@ -82,6 +82,17 @@
                                 @endforeach
                             </tbody>
                         </table>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-gradient-custom">
+                        <p class="p-0 m-0 fw-bold card-title text-white">Solusi Penyakit</p>
+                    </div>
+                    <div class="card-body">
+                        <p style="text-align: justify;">
+                            {{ json_decode(json_decode($dataPasien->hasil_diagnosa)->hasil_diagnosa)->solusi_penyakit }}
+                        </p>
                     </div>
                 </div>
 
