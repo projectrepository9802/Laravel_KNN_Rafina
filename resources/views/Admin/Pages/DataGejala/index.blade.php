@@ -52,10 +52,10 @@
                     </div>
                 @endif
 
-                <a href="{{ URL::to('data-gejala/create') }}" class="btn btn-gradient-custom mb-3">
+                {{-- <a href="{{ URL::to('data-gejala/create') }}" class="btn btn-gradient-custom mb-3">
                     <i class="fas fa-plus me-1"></i>
                     Tambah {{ $titlePage }}
-                </a>
+                </a> --}}
                 <table class="table table-bordered" id="dataTable" style="width: 100%;">
                     {{-- <colgroup>
                         <col style="width: 5%;">

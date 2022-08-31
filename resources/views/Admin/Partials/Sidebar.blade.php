@@ -1,6 +1,6 @@
 <ul class="navbar-nav bg-gradient-custom sidebar sidebar-dark accordion" id="accordionSidebar">
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ URL::to('dashboard') }}">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ URL::to('/') }}">
         <div class="sidebar-brand-icon">
             <i class="fas fa-server"></i>
         </div>
